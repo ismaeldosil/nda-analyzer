@@ -103,6 +103,7 @@ Set these parameters at the start of your analysis request. If not specified, de
 | `OUTPUT_FORMAT` | `matrix` / `summary` / `full` / `extended` / `complete` | `matrix` | Report detail level (see hierarchy below) |
 | `TRANSACTION_TYPE` | `M&A` / `JV` / `Strategic Partnership` / `Licensing` / `Minority Investment` / `Due Diligence Only` | `M&A` | Transaction context for severity calibration |
 | `PE_MODE` | `Yes` / `No` | `Yes` | Include PE-specific analysis (portfolio companies, affiliates) |
+| `SUGGEST_ADDITIONS` | `Yes` / `No` | `Yes` | Auto-generate text for missing clauses (PE Ack, etc.) |
 
 > **Note**: `INCLUDE_REDLINES` and `GENERATE_PE_ACK` removed in v2.7 — now controlled by OUTPUT_FORMAT (redlines in `extended`+, PE Ack always generated if missing and PE_MODE=Yes)
 
@@ -191,13 +192,62 @@ Analyze this NDA
 | 11 | Break-up Fee | OK | Not present |
 | 12-26 | Other | OK/[!] | [Summary] |
 
+## 📝 SUGGESTED TEXT FOR INSERTION
+
+> **Note**: The following text is auto-generated for missing clauses. Review with counsel before inserting.
+
+### PE Acknowledgement (Missing - Recommend Adding)
+
+```
+[COMPANY] acknowledges that [BUYER] and its affiliates are engaged in
+private equity investing and may invest in competitive entities. Except
+for restrictions on disclosure of Evaluation Material, this Agreement
+shall not prevent [BUYER] or affiliates from engaging in any business,
+entering into agreements with third parties, or evaluating or investing
+in any entity, whether or not competitive with [COMPANY].
+```
+
+**Insertion point**: Add as new section before "Miscellaneous" or "General Provisions"
+
 ---
 *Analysis does not constitute legal advice. Consult counsel before signing.*
 
 **Want more detail?** OUTPUT=summary / full / extended / complete
 ```
 
-**DO NOT generate**: Technical header, detailed findings, recommendations, redlines, legal sources
+> **SUGGEST_ADDITIONS Rule**: If `SUGGEST_ADDITIONS=Yes` (default) and any clause is flagged as NOT PRESENT but should exist (e.g., PE Acknowledgement), include the "SUGGESTED TEXT FOR INSERTION" section AND generate the "MODIFIED NDA DOCUMENT" section below.
+
+---
+
+## 📄 MODIFIED NDA DOCUMENT
+
+> **IMPORTANT**: When `SUGGEST_ADDITIONS=Yes` and clauses are missing, generate a complete modified version of the NDA with the suggested clauses already inserted at the appropriate locations.
+
+**Format**:
+```
+# MODIFIED NDA - [Document Name]
+
+> ⚠️ This is an auto-generated document with suggested clauses inserted.
+> Review with counsel before use. Changes marked with [ADDED].
+
+[Full NDA text with missing clauses inserted]
+
+---
+**Clauses Added**:
+- PE Acknowledgement (Section [X]) [ADDED]
+- [Other additions if any]
+```
+
+**Insertion Rules**:
+1. Insert PE Acknowledgement before "Miscellaneous" or "General Provisions" section
+2. Number the new section appropriately
+3. Mark all additions with `[ADDED]` tag
+4. Preserve all original formatting and section numbers
+5. Update any cross-references if needed
+
+---
+
+**DO NOT generate** (for matrix only): Technical header, detailed findings, recommendations, redlines, legal sources
 
 ### OUTPUT_FORMAT = summary
 

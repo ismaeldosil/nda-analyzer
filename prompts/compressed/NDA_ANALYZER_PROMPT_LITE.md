@@ -38,6 +38,7 @@ Need all 26 clauses? Ask for the FULL version.
 | `STRICTNESS` | Lenient / Standard / Strict | Standard |
 | `OUTPUT_FORMAT` | matrix / summary / full | matrix |
 | `PE_MODE` | Yes / No | Yes |
+| `SUGGEST_ADDITIONS` | Yes / No | Yes |
 
 ### OUTPUT_FORMAT Hierarchy
 
@@ -147,11 +148,56 @@ Keywords: "private equity", "portfolio", "affiliates"
 | 5 | Return of CI | [!] FLAG | No retention |
 | 6 | PE Ack | [!] FLAG | Not present |
 
+## 📝 SUGGESTED TEXT FOR INSERTION
+
+> **Note**: The following text is auto-generated for missing clauses. Review with counsel before inserting.
+
+### PE Acknowledgement (Missing - Recommend Adding)
+
+```
+[COMPANY] acknowledges that [BUYER] and its affiliates are engaged in
+private equity investing and may invest in competitive entities. Except
+for restrictions on disclosure of Evaluation Material, this Agreement
+shall not prevent [BUYER] or affiliates from engaging in any business,
+entering into agreements with third parties, or evaluating or investing
+in any entity, whether or not competitive with [COMPANY].
+```
+
+**Insertion point**: Add as new section before "Miscellaneous" or "General Provisions"
+
 ---
 *Analysis does not constitute legal advice. Consult counsel before signing.*
 
 **Want more detail?** OUTPUT=summary / full
 ```
+
+> **SUGGEST_ADDITIONS Rule**: If `SUGGEST_ADDITIONS=Yes` (default) and PE Acknowledgement is NOT PRESENT, include the "SUGGESTED TEXT FOR INSERTION" section AND generate the "MODIFIED NDA DOCUMENT" section below.
+
+---
+
+## 📄 MODIFIED NDA DOCUMENT
+
+> **IMPORTANT**: When `SUGGEST_ADDITIONS=Yes` and clauses are missing, generate a complete modified version of the NDA with the suggested clauses already inserted.
+
+**Format**:
+```
+# MODIFIED NDA - [Document Name]
+
+> ⚠️ This is an auto-generated document with suggested clauses inserted.
+> Review with counsel before use. Changes marked with [ADDED].
+
+[Full NDA text with missing clauses inserted]
+
+---
+**Clauses Added**:
+- PE Acknowledgement (Section [X]) [ADDED]
+```
+
+**Insertion Rules**:
+1. Insert PE Acknowledgement before "Miscellaneous" or "General Provisions"
+2. Number the new section appropriately
+3. Mark additions with `[ADDED]` tag
+4. Preserve original formatting
 
 ---
 
