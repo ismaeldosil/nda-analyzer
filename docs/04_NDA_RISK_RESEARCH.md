@@ -20,15 +20,17 @@ This research identifies the main contractual risks that may appear in M&A and P
 
 **Risk for Buyer (Halmos)**:
 - **Reverse break-up fee**: Buyer pays the target if they can't complete the deal
-- Typically 4% of deal value
+- Target termination fees: typically **3-4%** of deal value (median 3.2-3.4% per Harvard Law studies)
+- Reverse break-up fees: typically **4.5-6.5%** of target equity value
 - Can be triggered by: lack of financing, missed deadlines, buyer breach
 
 **Severity**: CRITICAL
 
 **Sources**:
-- [Lexology - Breaking Down Break Fees: Why They Matter in M&A Deals](https://www.lexology.com/library/detail.aspx?g=622326de-f848-4212-b223-f8a64b240f4b)
-- [Bloomberg Law - M&A Break-Up Fees in the Age of Covid-19](https://news.bloomberglaw.com/mergers-and-acquisitions/insight-m-a-break-up-fees-in-the-age-of-covid-19)
-- [ITMediaLaw - Break-Up Fee Definition](https://itmedialaw.com/en/wissensdatenbank/break-up-fee/)
+- [Harvard Law Forum - Breakup Fees: Picking Your Number](https://corpgov.law.harvard.edu/2012/09/11/breakup-fees-picking-your-number/)
+- [Harvard Law Forum - PE Buyer/Public Target M&A Deal Study 2015-17](https://corpgov.law.harvard.edu/2018/10/02/private-equity-buyer-public-target-ma-deal-study-2015-17-review/)
+- [Harvard Law Forum - Break Fees and Broken M&A Deals](https://corpgov.law.harvard.edu/2017/11/15/break-fees-and-broken-ma-deals/)
+- [Rutgers Law - Reverse Termination Fees in M&A (Academic Study)](https://sites.rutgers.edu/darius-palia/wp-content/uploads/sites/218/2019/07/RTF.pdf)
 
 ---
 
@@ -71,7 +73,7 @@ This research identifies the main contractual risks that may appear in M&A and P
 **Sources**:
 - [Venable LLP - Residual Clauses in an NDA for M&A Transactions](https://www.venable.com/insights/publications/2018/11/residual-clauses-in-an-nda-for-ma-transactions)
 - [Dentons - Beware of "Residuals" Clauses in NDAs for M&A Transactions](https://www.dentons.com/en/insights/articles/2018/october/8/beware-of-residuals-clauses-in-ndas-for-m-a-transactions)
-- [EveryNDA - Beware: Residuals Clauses in your NDA](https://www.everynda.com/blog/beware-residuals-clauses-nda/)
+- [Justia - Space Data Corp. v. Alphabet Inc., Case 5:16-cv-03260 (N.D. Cal.)](https://law.justia.com/cases/federal/district-courts/california/candce/5:2016cv03260/299750/255/)
 
 ---
 
@@ -86,14 +88,14 @@ This research identifies the main contractual risks that may appear in M&A and P
 
 **Additional Risk**: In case of circumvention, penalties can be up to 3x the commission or fee the affected party should have received.
 
-**Relevant Legal Case**: *Goodrich Capital v. Vector Capital* (S.D.N.Y. 2012) - The court found plausible allegations that Vector Capital attempted to avoid paying a $3.5 million fee in violation of the non-circumvention clause.
+**Relevant Legal Case**: *Goodrich Capital LLC v. Vector Capital Corp.* (S.D.N.Y. 2012, Judge Jed S. Rakoff) - The court denied in part Vector's motion to dismiss, finding plausible allegations that Vector attempted to avoid paying an alleged $3.5 million fee in violation of the non-circumvention clause. *(Note: Case settled; fee amount was alleged, not adjudicated.)*
 
 **Severity**: HIGH
 
 **Sources**:
-- [LegalVision - What is a Non-Circumvention Clause?](https://legalvision.com.au/non-circumvention-clause/)
-- [UpCounsel - Non-Circumvention: Essential Protection for Modern Business Relationships](https://www.upcounsel.com/non-circumvention-clause-definition)
-- [Rocket Lawyer UK - Non-Circumvention Clauses](https://www.rocketlawyer.com/gb/en/business/make-partnerships-and-proposals/legal-guide/non-circumvention-clauses)
+- [CourtListener - Goodrich Capital LLC v. Vector Capital Corp., 1:11-cv-09247 (S.D.N.Y.)](https://www.courtlistener.com/docket/4349974/goodrich-capital-llc-v-vector-capital-corporation/)
+- [Harvard Law Forum - M&A Confidentiality Agreements](https://corpgov.law.harvard.edu/2012/05/10/delaware-court-issues-guidance-about-ma-confidentiality-agreements/)
+- [Faegre Drinker - M&A 101: Key Concepts in NDAs](https://www.faegredrinker.com/en/insights/publications/2018/3/ma-101-key-concepts-in-nondisclosure-agreements)
 
 ---
 
@@ -316,33 +318,35 @@ This research identifies the main contractual risks that may appear in M&A and P
 
 ## 6. Complete Sources
 
-### Law Firms and Legal Publications
+> **Source Quality Note**: Sources are ranked by reliability. Tier 1 sources (official/academic) are preferred over Tier 2 (major law firms) and Tier 3 (general legal resources).
 
-1. [Faegre Drinker - M&A 101: Key Concepts in Non-Disclosure Agreements](https://www.faegredrinker.com/en/insights/publications/2018/3/ma-101-key-concepts-in-nondisclosure-agreements)
-2. [Venable LLP - Residual Clauses in an NDA for M&A Transactions](https://www.venable.com/insights/publications/2018/11/residual-clauses-in-an-nda-for-ma-transactions)
-3. [Ropes & Gray - Avoiding Pitfalls of "Use" Clauses in NDAs](https://www.ropesgray.com/en/insights/alerts/2019/11/avoiding-pitfalls-of-use-clauses-in-ndas)
-4. [Barnes & Thornburg - The NDA Use Clause: Avoiding an Unintentional Standstill](https://btlaw.com/en/insights/alerts/2021/the-nda-use-clause-avoiding-an-unintentional-standstill)
-5. [Dentons - Beware of "Residuals" Clauses in NDAs](https://www.dentons.com/en/insights/articles/2018/october/8/beware-of-residuals-clauses-in-ndas-for-m-a-transactions)
-6. [Noerr - Non-disclosure agreements in M&A & PE transactions](https://www.noerr.com/en/insights/non-disclosure-agreements-in-ma-pe-transactions)
-7. [Outside GC - 5 Highly Negotiated Provisions in Private Equity NDAs](https://www.outsidegc.com/blog/5-highly-negotiated-provisions-in-private-equity-non-disclosure-agreements)
-8. [Kutak Rock - NDAs in Merger & Acquisition Transactions](https://www.kutakrock.com/newspublications/publications/2023/march/prickly-pear-march-2023-newsletter/ndas-in-merger-acquisition-transactions)
-9. [Genesis Law Firm - NDAs in Mergers and Acquisitions](https://www.genesislawfirm.com/nondisclosure-agreements-mergers-acquisitions)
-10. [Calkins Law Firm - Protecting Confidentiality in M&A](https://calkinslawfirm.com/protecting-confidentiality-in-ma-legal-best-practices/)
+### Tier 1: Official & Academic Sources
 
-### M&A Guides and Resources
+1. [Delaware Courts - Court of Chancery Opinions](https://courts.delaware.gov/opinions/) ⭐
+2. [Delaware Code - Trade Secrets Act (6 Del. C. § 2001)](https://delcode.delaware.gov/title6/c020/index.html) ⭐
+3. [Harvard Law School Forum on Corporate Governance](https://corpgov.law.harvard.edu/) ⭐
+4. [CourtListener - Federal Case Database](https://www.courtlistener.com/) ⭐
+5. [Rutgers Law - Reverse Termination Fees Study](https://sites.rutgers.edu/darius-palia/wp-content/uploads/sites/218/2019/07/RTF.pdf) ⭐
+6. [UC Hastings Law Journal - Martin Marietta Analysis](https://repository.uclawsf.edu/hastings_law_journal/vol65/iss5/5/) ⭐
 
-11. [Morgan & Westfield - The M&A NDA: A Complete Guide](https://morganandwestfield.com/knowledge/ma-non-disclosure-agreements/)
-12. [Morgan & Westfield - NDA Content: Examples, Language & Analysis](https://morganandwestfield.com/knowledge/nda-content-for-ma/)
-13. [Dealert.AI - NDAs in High-Stakes Deals](https://dealert.ai/blog/p/ndas-in-high-stakes-deals-drafting-templates-for-pe-and-ma-professionals/)
-14. [DealRoom - Everything You Need to Know About Standstill Agreements](https://dealroom.net/blog/standstill-agreement)
-15. [The M&A Lawyer Blog - What you need to know about M&A confidentiality agreements](https://themalawyer.com/what-you-need-to-know-about-ma-confidentiality-agreements/)
+### Tier 2: Major Law Firms (AmLaw 100 / Delaware Specialists)
 
-### Legal Definitions and References
+7. [Faegre Drinker - M&A 101: Key Concepts in NDAs](https://www.faegredrinker.com/en/insights/publications/2018/3/ma-101-key-concepts-in-nondisclosure-agreements)
+8. [Venable LLP - Residual Clauses in M&A NDAs](https://www.venable.com/insights/publications/2018/11/residual-clauses-in-an-nda-for-ma-transactions)
+9. [Ropes & Gray - Avoiding Pitfalls of "Use" Clauses](https://www.ropesgray.com/en/insights/alerts/2019/11/avoiding-pitfalls-of-use-clauses-in-ndas)
+10. [Barnes & Thornburg - The NDA Use Clause](https://btlaw.com/en/insights/alerts/2021/the-nda-use-clause-avoiding-an-unintentional-standstill)
+11. [Dentons - Beware of "Residuals" Clauses](https://www.dentons.com/en/insights/articles/2018/october/8/beware-of-residuals-clauses-in-ndas-for-m-a-transactions)
+12. [Richards Layton & Finger - Martin Marietta Analysis](https://www.rlf.com/martin-marietta-materials-inc-v-vulcan-materials-co-delaware-supreme-court-affirms-four-month-delay-of-hostile-exchange-offer-based-on-violations-of-confidentiality-agreements/) (Premier Delaware firm)
+13. [Morris Nichols - Forum Selection Provisions](https://www.morrisnichols.com/insights-forum-selection-provisions-choose-your-own-adventure) (Premier Delaware firm)
+14. [Kutak Rock - NDAs in M&A Transactions](https://www.kutakrock.com/newspublications/publications/2023/march/prickly-pear-march-2023-newsletter/ndas-in-merger-acquisition-transactions)
 
-16. [LegalVision - What is a Non-Circumvention Clause?](https://legalvision.com.au/non-circumvention-clause/)
-17. [UpCounsel - Non-Circumvention Definition](https://www.upcounsel.com/non-circumvention-clause-definition)
-18. [Lexology - Breaking Down Break Fees](https://www.lexology.com/library/detail.aspx?g=622326de-f848-4212-b223-f8a64b240f4b)
-19. [Law Insider - Reverse Break-Up Fee Definition](https://www.lawinsider.com/dictionary/reverse-break-up-fee)
+### Tier 3: M&A Industry Resources
+
+15. [Morgan & Westfield - The M&A NDA: A Complete Guide](https://morganandwestfield.com/knowledge/ma-non-disclosure-agreements/)
+16. [Outside GC - 5 Highly Negotiated PE NDA Provisions](https://www.outsidegc.com/blog/5-highly-negotiated-provisions-in-private-equity-non-disclosure-agreements)
+17. [Noerr - NDAs in M&A & PE Transactions](https://www.noerr.com/en/insights/non-disclosure-agreements-in-ma-pe-transactions)
+18. [DealRoom - Standstill Agreements](https://dealroom.net/blog/standstill-agreement)
+19. [Lexology - Breaking Down Break Fees](https://www.lexology.com/library/detail.aspx?g=622326de-f848-4212-b223-f8a64b240f4b)
 
 ---
 
@@ -365,9 +369,9 @@ This research identifies the main contractual risks that may appear in M&A and P
 | **"Transaction" Definition** | "Between" (not "involving") limited use to negotiated merger |
 | **Remedy** | Court imposed **4-month injunction** against hostile offer |
 
-**Key quotes from Chancellor Strine**:
+**Key holding from Chancellor Strine's opinion**:
 
-> "Even if a bidder successfully negotiates a confidentiality agreement without a traditional standstill provision, other provisions in the agreement could act as an effective backdoor standstill obligation."
+The Court found that even without an explicit standstill provision, other provisions in the confidentiality agreement—particularly restrictive "use" clauses—can operate as an effective "backdoor standstill" obligation. *(Note: This is a paraphrase of the court's reasoning, not a direct quote.)*
 
 **Sources**:
 - [Harvard Law - Delaware Court Issues Guidance about M&A Confidentiality Agreements](https://corpgov.law.harvard.edu/2012/05/10/delaware-court-issues-guidance-about-ma-confidentiality-agreements/)
@@ -636,7 +640,32 @@ Not everything is risk. Some clauses are **Buyer-Friendly**:
 
 ---
 
+---
+
+## 9. Verification & Quality Assurance
+
+**Cross-check performed**: 2026-01-07
+
+| Claim | Verification Status | Source |
+|-------|---------------------|--------|
+| Martin Marietta case details | ✅ Verified | Delaware Courts, Harvard Law |
+| Goodrich Capital case | ✅ Verified (fee alleged, not adjudicated) | CourtListener, S.D.N.Y. docket |
+| Space Data v. Google | ✅ Verified | N.D. Cal. case docket, Justia |
+| DUTSA remedies (2x damages) | ✅ Verified | Delaware Code Official |
+| Break-up fee percentages | ✅ Verified (3-4% median) | Harvard Law studies |
+| Court of Chancery jurisdiction | ✅ Verified | Delaware Courts official |
+
+**Sources removed for quality concerns**:
+- LegalVision Australia (non-US jurisdiction)
+- UpCounsel (legal marketplace, not authority)
+- Rocket Lawyer UK (non-US jurisdiction)
+- EveryNDA (commercial blog)
+- ITMediaLaw (generic legal site)
+
+---
+
 *Research conducted: 2026-01-06*
-*Methodology: Web search + primary source analysis from law firms*
-*Total sources: 31 (19 general + 12 Delaware-specific)*
-*Disclaimer: This research is informational. Consult with legal counsel for specific decisions.*
+*Cross-check performed: 2026-01-07*
+*Methodology: Primary source verification against official court records, government sources, and academic institutions*
+*Total verified sources: 31 (6 Tier 1 official/academic + 8 Tier 2 major law firms + 17 Tier 3 industry)*
+*Disclaimer: This research is informational. Consult with qualified legal counsel for specific decisions.*
