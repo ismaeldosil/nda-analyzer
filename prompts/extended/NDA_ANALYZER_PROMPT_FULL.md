@@ -192,6 +192,8 @@ Analyze this NDA
 | 12-26 | Other | OK/[!] | [Summary] |
 
 ---
+*Analysis does not constitute legal advice. Consult counsel before signing.*
+
 **Want more detail?** OUTPUT=summary / full / extended / complete
 ```
 

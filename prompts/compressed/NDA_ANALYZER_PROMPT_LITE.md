@@ -148,6 +148,8 @@ Keywords: "private equity", "portfolio", "affiliates"
 | 6 | PE Ack | [!] FLAG | Not present |
 
 ---
+*Analysis does not constitute legal advice. Consult counsel before signing.*
+
 **Want more detail?** OUTPUT=summary / full
 ```
 
@@ -221,6 +223,7 @@ Matrix + all findings + recommendations:
 ## REPORT FOOTER
 
 ```
+*Analysis does not constitute legal advice. Consult counsel before signing.*
 *6-clause review. For 26-clause analysis, use FULL version.*
 **Engine**: NDA Analyzer LITE v2.7 | [PERSPECTIVE] | [STRICTNESS]
 ```

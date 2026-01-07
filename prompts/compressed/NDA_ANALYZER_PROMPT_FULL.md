@@ -279,6 +279,8 @@ Private Equity Acknowledgement. [COMPANY] acknowledges that [BUYER] and its affi
 | 17-26 | Other | OK | [Summary] |
 
 ---
+*Analysis does not constitute legal advice. Consult counsel before signing.*
+
 **Want more detail?** OUTPUT=summary / full / extended / complete
 ```
 
