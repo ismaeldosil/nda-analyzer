@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NDA Analyzer - Usage Guide | Halmos Capital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-orange: #fb511f;
+            --secondary-orange: #e95d34;
+            --black: #000000;
+            --white: #ffffff;
+            --light-gray: #f4f4f4;
+            --dark-gray: #353637;
+            --accent-gray: #707070;
+            --border-gray: #e0e0e0;
+            --success: #2ecc71;
+            --warning: #f39c12;
+            --danger: #e74c3c;
+            --info: #3498db;
+            --card-shadow: -1px 2px 45px rgba(0,0,0,0.19);
+            --light-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-xl: 30px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-weight: 400;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background: var(--white);
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--black) 0%, var(--dark-gray) 100%);
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 45%;
+            height: 100%;
+            background: var(--primary-orange);
+            clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
+            opacity: 0.9;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero .subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+
+        .version-badge {
+            display: inline-block;
+            background: var(--primary-orange);
+            color: var(--white);
+            padding: 0.6rem 1.8rem;
+            border-radius: var(--radius-lg);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        section {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--card-shadow);
+        }
+
+        h2 {
+            color: var(--black);
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding-bottom: 0.75rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 4px solid var(--primary-orange);
+            display: inline-block;
+        }
+
+        h3 {
+            color: var(--dark-gray);
+            font-weight: 600;
+            margin: 1.5rem 0 1rem;
+            font-size: 1.2rem;
+        }
+
+        h4 {
+            color: var(--black);
+            font-weight: 600;
+            margin: 1rem 0 0.5rem;
+            font-size: 1.05rem;
+        }
+
+        p { margin-bottom: 1rem; }
+
+        .method-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .method-card {
+            background: var(--light-gray);
+            border-radius: var(--radius-xl);
+            padding: 1.5rem;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .method-card:hover {
+            border-color: var(--primary-orange);
+            transform: translateY(-4px);
+            box-shadow: var(--card-shadow);
+        }
+
+        .method-card h4 {
+            color: var(--black);
+            margin-bottom: 1rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .method-card .badge-recommended {
+            background: var(--success);
+            color: var(--white);
+            font-size: 0.65rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: var(--radius-lg);
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .method-card .badge-paid {
+            background: var(--warning);
+            color: var(--white);
+            font-size: 0.65rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: var(--radius-lg);
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .method-card ol, .method-card ul {
+            margin-left: 1.25rem;
+            color: var(--dark-gray);
+        }
+
+        .method-card li {
+            padding: 0.4rem 0;
+            font-size: 0.95rem;
+        }
+
+        .method-card li strong {
+            color: var(--black);
+        }
+
+        .code-block {
+            background: var(--black);
+            color: var(--light-gray);
+            padding: 1.25rem 1.5rem;
+            border-radius: var(--radius-md);
+            overflow-x: auto;
+            font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+            font-size: 0.875rem;
+            margin: 1rem 0;
+            line-height: 1.6;
+            white-space: pre-wrap;
+        }
+
+        .code-block .placeholder {
+            color: var(--primary-orange);
+            font-style: italic;
+        }
+
+        code {
+            font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+            background: var(--light-gray);
+            padding: 0.2rem 0.5rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.875em;
+            color: var(--primary-orange);
+        }
+
+        .prompts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .prompt-card {
+            background: var(--light-gray);
+            border-radius: var(--radius-md);
+            padding: 1rem 1.25rem;
+            border-left: 4px solid var(--primary-orange);
+        }
+
+        .prompt-card .label {
+            font-size: 0.8rem;
+            color: var(--accent-gray);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .prompt-card .prompt {
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.85rem;
+            color: var(--dark-gray);
+            line-height: 1.5;
+        }
+
+        .alert {
+            padding: 1.25rem 1.5rem;
+            border-radius: var(--radius-md);
+            margin: 1.5rem 0;
+            font-weight: 500;
+        }
+
+        .alert strong {
+            display: block;
+            margin-bottom: 0.25rem;
+            font-weight: 700;
+        }
+
+        .alert-info {
+            background: rgba(52, 152, 219, 0.12);
+            border-left: 5px solid var(--info);
+            color: #0c5460;
+        }
+
+        .alert-warning {
+            background: rgba(243, 156, 18, 0.12);
+            border-left: 5px solid var(--warning);
+            color: #9a6700;
+        }
+
+        .alert-success {
+            background: rgba(46, 204, 113, 0.12);
+            border-left: 5px solid var(--success);
+            color: #1e7e34;
+        }
+
+        .troubleshoot-item {
+            background: var(--light-gray);
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .troubleshoot-item .problem {
+            font-weight: 700;
+            color: var(--danger);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .troubleshoot-item .solution {
+            font-size: 0.9rem;
+            color: var(--dark-gray);
+        }
+
+        .source-link {
+            font-size: 0.8rem;
+            color: var(--accent-gray);
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-gray);
+        }
+
+        .source-link a {
+            color: var(--info);
+            text-decoration: none;
+        }
+
+        .source-link a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background: var(--black);
+            color: var(--white);
+            text-align: center;
+            padding: 2.5rem 2rem;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin: 0.25rem 0;
+            font-size: 0.9rem;
+        }
+
+        footer strong {
+            color: var(--primary-orange);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .hero::before {
+                width: 100%;
+                height: 30%;
+                clip-path: none;
+                top: auto;
+                bottom: 0;
+            }
+            .container { padding: 1rem; }
+            section {
+                padding: 1.5rem;
+                border-radius: var(--radius-lg);
+            }
+            .method-grid { grid-template-columns: 1fr; }
+        }
+
+        @media print {
+            .hero {
+                background: var(--black) !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .hero::before { display: none; }
+            section {
+                break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid var(--border-gray);
+            }
+            footer {
+                background: var(--black) !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="hero-content">
+            <h1>NDA Analyzer</h1>
+            <p class="subtitle">M&A NDA Analysis Prompt for LLMs</p>
+            <span class="version-badge">Usage Guide v2.7</span>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- ChatGPT Section -->
+        <section>
+            <h2>Using with ChatGPT</h2>
+
+            <div class="method-grid">
+                <div class="method-card">
+                    <h4>Option 1: Direct in Conversation <span class="badge-recommended">Recommended</span></h4>
+                    <p>Works with any prompt length. Interactive onboarding.</p>
+                    <ol>
+                        <li>Go to <a href="https://chatgpt.com" target="_blank">chatgpt.com</a></li>
+                        <li>Click <strong>New chat</strong> (top left corner)</li>
+                        <li>Copy the entire NDA Analyzer prompt and paste it into the message box</li>
+                        <li>Press Enter to send - the analyzer will ask for your preferences</li>
+                        <li>Reply with your choices or type "defaults" to use standard settings</li>
+                        <li>Click the <strong>paperclip icon</strong> to upload your NDA (PDF or DOCX)</li>
+                    </ol>
+                </div>
+
+                <div class="method-card">
+                    <h4>Option 2: Custom Instructions</h4>
+                    <p>Persists across conversations. Limited to 1,500 chars.</p>
+                    <ol>
+                        <li>Go to <a href="https://chatgpt.com" target="_blank">chatgpt.com</a></li>
+                        <li>Click your <strong>profile picture</strong> (bottom left corner)</li>
+                        <li>Select <strong>Settings</strong></li>
+                        <li>Click <strong>Personalization</strong> on the left menu</li>
+                        <li>Click <strong>Custom instructions</strong></li>
+                        <li>Paste the prompt (use LITE version - FULL may be too long)</li>
+                        <li>Click <strong>Save</strong></li>
+                    </ol>
+                </div>
+            </div>
+
+            <h3>File Upload</h3>
+            <p>ChatGPT supports PDF and DOCX uploads. Click the <strong>paperclip icon</strong> next to the message box to upload your NDA document.</p>
+
+            <div class="source-link">
+                Source: <a href="https://help.openai.com/en/articles/8096356-chatgpt-custom-instructions" target="_blank">OpenAI Help Center - Custom Instructions</a>
+            </div>
+        </section>
+
+        <!-- Claude Section -->
+        <section>
+            <h2>Using with Claude</h2>
+
+            <div class="method-grid">
+                <div class="method-card">
+                    <h4>Option 1: Direct in Conversation <span class="badge-recommended">Recommended</span></h4>
+                    <p>Works with any prompt length. Interactive onboarding.</p>
+                    <ol>
+                        <li>Go to <a href="https://claude.ai" target="_blank">claude.ai</a></li>
+                        <li>Click <strong>New chat</strong> or start typing in the message box</li>
+                        <li>Copy the entire NDA Analyzer prompt and paste it into the message box</li>
+                        <li>Press Enter to send - the analyzer will ask for your preferences</li>
+                        <li>Reply with your choices or type "defaults" to use standard settings</li>
+                        <li>Click the <strong>paperclip icon</strong> to upload your NDA (PDF supported)</li>
+                    </ol>
+                </div>
+
+                <div class="method-card">
+                    <h4>Option 2: Projects</h4>
+                    <p>Saves instructions for reuse. Free users: max 5 projects.</p>
+                    <ol>
+                        <li>Go to <a href="https://claude.ai" target="_blank">claude.ai</a></li>
+                        <li>Click <strong>Projects</strong> in the left sidebar</li>
+                        <li>Click <strong>Create project</strong></li>
+                        <li>Give your project a name (e.g., "NDA Analyzer")</li>
+                        <li>Click the <strong>project instructions</strong> area and paste the prompt</li>
+                        <li>Optionally upload reference files to the project's knowledge base</li>
+                        <li>Click <strong>Start chat</strong> to begin analyzing NDAs</li>
+                    </ol>
+                </div>
+            </div>
+
+            <h3>File Upload</h3>
+            <p>Claude supports PDF uploads directly in chat. Click the <strong>paperclip icon</strong> next to the message box to upload your NDA document.</p>
+
+            <div class="source-link">
+                Source: <a href="https://support.anthropic.com/en/articles/9519177-how-can-i-create-and-manage-projects" target="_blank">Claude Help Center - Projects</a>
+            </div>
+        </section>
+
+        <!-- Gemini Section -->
+        <section>
+            <h2>Using with Google Gemini</h2>
+
+            <div class="method-grid">
+                <div class="method-card">
+                    <h4>Option 1: Direct in Conversation <span class="badge-recommended">Recommended</span></h4>
+                    <p>Works with any prompt length. Interactive onboarding.</p>
+                    <ol>
+                        <li>Go to <a href="https://gemini.google.com" target="_blank">gemini.google.com</a></li>
+                        <li>Copy the entire NDA Analyzer prompt and paste it into the message box</li>
+                        <li>Press Enter to send - the analyzer will ask for your preferences</li>
+                        <li>Reply with your choices or type "defaults" to use standard settings</li>
+                        <li>Click the <strong>+ icon</strong> (left of the message box) to add files</li>
+                        <li>Select <strong>Upload file</strong> and choose your NDA document</li>
+                    </ol>
+                </div>
+
+                <div class="method-card">
+                    <h4>Option 2: Gems <span class="badge-paid">Gemini Advanced</span></h4>
+                    <p>Persistent instructions. Requires paid subscription.</p>
+                    <ol>
+                        <li>Go to <a href="https://gemini.google.com" target="_blank">gemini.google.com</a></li>
+                        <li>Open the sidebar by clicking the <strong>menu icon</strong> (three lines, top left)</li>
+                        <li>Click <strong>Gems</strong> in the sidebar menu</li>
+                        <li>Click <strong>New Gem</strong></li>
+                        <li>Enter a name (e.g., "NDA Analyzer")</li>
+                        <li>Paste the prompt in the <strong>Instructions</strong> field</li>
+                        <li>Click <strong>Save</strong></li>
+                        <li>Your Gem will appear in the sidebar - click it to start analyzing</li>
+                    </ol>
+                </div>
+            </div>
+
+            <h3>File Upload</h3>
+            <p>Gemini supports PDF, DOCX, and most file types. Click the <strong>+ icon</strong> next to the message box, then select <strong>Upload file</strong>. Limit: 10 files per prompt, 100MB each.</p>
+
+            <div class="source-link">
+                Sources: <a href="https://support.google.com/gemini/answer/15236405" target="_blank">Gemini Help - Gems</a> | <a href="https://support.google.com/gemini/answer/14903178" target="_blank">Gemini Help - File Upload</a>
+            </div>
+        </section>
+
+        <!-- Example Prompts -->
+        <section>
+            <h2>Example Prompts</h2>
+
+            <h3>Output Formats</h3>
+            <div class="prompts-grid">
+                <div class="prompt-card">
+                    <div class="label">Quick Overview (Default)</div>
+                    <div class="prompt">Analyze this NDA</div>
+                </div>
+                <div class="prompt-card">
+                    <div class="label">With Key Findings</div>
+                    <div class="prompt">Analyze this NDA with OUTPUT=summary</div>
+                </div>
+                <div class="prompt-card">
+                    <div class="label">Full Report</div>
+                    <div class="prompt">Analyze this NDA with OUTPUT=full</div>
+                </div>
+                <div class="prompt-card">
+                    <div class="label">With Redlines</div>
+                    <div class="prompt">Analyze this NDA with OUTPUT=extended</div>
+                </div>
+            </div>
+
+            <h3>Perspectives</h3>
+            <div class="prompts-grid">
+                <div class="prompt-card">
+                    <div class="label">Buyer (Default)</div>
+                    <div class="prompt">Analyze this NDA</div>
+                </div>
+                <div class="prompt-card">
+                    <div class="label">Seller Perspective</div>
+                    <div class="prompt">Analyze this NDA with PERSPECTIVE=Seller</div>
+                </div>
+                <div class="prompt-card">
+                    <div class="label">Strict Review</div>
+                    <div class="prompt">Analyze this NDA with STRICTNESS=Strict</div>
+                </div>
+                <div class="prompt-card">
+                    <div class="label">Joint Venture</div>
+                    <div class="prompt">Analyze this NDA with TRANSACTION=JV</div>
+                </div>
+            </div>
+
+            <h3>Special Requests</h3>
+            <div class="prompts-grid">
+                <div class="prompt-card">
+                    <div class="label">Generate PE Ack</div>
+                    <div class="prompt">Generate PE Acknowledgement for "Halmos Capital Partners"</div>
+                </div>
+                <div class="prompt-card">
+                    <div class="label">Complete Legal Review</div>
+                    <div class="prompt">Analyze this NDA with OUTPUT=complete</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Troubleshooting -->
+        <section>
+            <h2>Troubleshooting</h2>
+
+            <div class="troubleshoot-item">
+                <div class="problem">"Response got cut off"</div>
+                <div class="solution">
+                    Say: <code>Continue from where you left off</code><br>
+                    Or use: <code>OUTPUT_FORMAT=Executive</code> for shorter output
+                </div>
+            </div>
+
+            <div class="troubleshoot-item">
+                <div class="problem">"Not following the format"</div>
+                <div class="solution">
+                    Say: <code>Follow the exact output format from the framework, including the Risk Assessment Matrix table</code>
+                </div>
+            </div>
+
+            <div class="troubleshoot-item">
+                <div class="problem">"Assuming clauses exist"</div>
+                <div class="solution">
+                    Say: <code>If a clause is not found, mark it as "NOT PRESENT". Do not assume market-standard inclusion.</code>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips -->
+        <section>
+            <h2>Tips</h2>
+
+            <div class="alert alert-success">
+                <strong>Auto-Analyze</strong>
+                Just upload your NDA and the analyzer will give you a Risk Matrix immediately. No need to configure anything first.
+            </div>
+
+            <div class="alert alert-info">
+                <strong>Output Levels</strong>
+                Default is <code>matrix</code> (quick overview). The output will show "Want more detail?" options for <code>summary</code>, <code>full</code>, <code>extended</code>, and <code>complete</code>.
+            </div>
+
+            <div class="alert alert-warning">
+                <strong>LITE vs FULL</strong>
+                Use LITE for quick 6-clause review. Use FULL for comprehensive 26-clause analysis.
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p><strong>NDA Analyzer</strong> - M&A Due Diligence Tool | Halmos Capital</p>
+        <p>Version 2.7 | January 2026</p>
+    </footer>
+</body>
+</html>
