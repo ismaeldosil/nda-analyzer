@@ -66,3 +66,6 @@ temp/
 # Confidential Client Documents
 # =============================================================================
 sample-ndas/
+
+# Internal scripts
+scripts/
