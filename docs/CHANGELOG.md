@@ -16,6 +16,9 @@
   - `full`: Matrix + All findings + Recommendations
   - `extended`: Full + Redline templates
   - `complete`: Extended + Legal sources + Cross-refs
+- **SUGGEST_ADDITIONS parameter**: New parameter (default=Yes) that auto-generates:
+  - Suggested text for missing clauses (e.g., PE Acknowledgement)
+  - **Modified NDA Document**: Complete NDA with suggested clauses already inserted at appropriate locations, marked with `[ADDED]` tags
 - **Format upsell**: matrix output now ends with "Want more detail?" offering other formats
 - **Simplified parameters**: Removed `INCLUDE_REDLINES` and `GENERATE_PE_ACK` (now controlled by output format)
 - **LITE now includes Legal Sources**: Case law references (Martin Marietta, Goodrich Capital v. Vector Capital) and Delaware statutes added to LITE versions

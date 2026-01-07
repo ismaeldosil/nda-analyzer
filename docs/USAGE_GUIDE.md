@@ -143,7 +143,7 @@ Analyze this NDA with PERSPECTIVE=Seller
 ```
 
 ```
-Analyze this NDA with OUTPUT_FORMAT=Executive
+Analyze this NDA with OUTPUT_FORMAT=summary
 ```
 
 ```
@@ -170,7 +170,7 @@ Focus on any deal-breakers or significant negotiation points.
 
 **Quick Risk Check:**
 ```
-Analyze this NDA with OUTPUT_FORMAT=Executive.
+Analyze this NDA with OUTPUT_FORMAT=summary.
 Just give me the key risks and whether we should sign as-is.
 ```
 
@@ -182,14 +182,22 @@ I need specific language to propose for any problematic clauses.
 
 ### Special Features
 
-**Generate PE Acknowledgement:**
+**Generate Modified NDA with Missing Clauses (default behavior):**
 ```
-This NDA is missing PE Acknowledgement. Generate insertion text for "Halmos Capital Partners"
+Analyze this NDA
+```
+With SUGGEST_ADDITIONS=Yes (default), the analyzer automatically generates:
+- Suggested text for missing clauses
+- A complete modified NDA document with clauses inserted
+
+**Disable Suggested Additions:**
+```
+Analyze this NDA with SUGGEST_ADDITIONS=No
 ```
 
 **Get Suggested Redlines:**
 ```
-Provide redline suggestions for the flagged issues
+Analyze this NDA with OUTPUT_FORMAT=extended
 ```
 
 **AI Restrictions Analysis:**
@@ -207,7 +215,7 @@ Continue the analysis from where you left off
 ```
 Or use:
 ```
-Analyze this NDA with OUTPUT_FORMAT=Summary
+Analyze this NDA with OUTPUT_FORMAT=summary
 ```
 
 ### "Not following the format"

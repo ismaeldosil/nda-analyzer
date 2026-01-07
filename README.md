@@ -36,6 +36,8 @@ This repository contains system prompts designed to analyze NDAs from a **Buyer 
 - **Risk Matrix Output**: Clean, actionable risk summary
 - **Delaware Optimized**: Baseline expectations for Delaware law
 - **PE Mode**: Special handling for Private Equity buyers
+- **Suggest Additions**: Auto-generates suggested text for missing clauses
+- **Modified NDA Output**: Generates complete NDA with suggested clauses inserted
 
 ## Core Clauses Analyzed
 
@@ -96,6 +98,7 @@ The analysis references established M&A case law:
 - Interactive onboarding
 - Matrix output as default
 - Legal sources in LITE version
+- SUGGEST_ADDITIONS with modified NDA generation
 
 ## License
 

@@ -71,6 +71,7 @@ Customize your analysis by specifying parameters:
 | `OUTPUT_FORMAT` | matrix / summary / full / extended / complete | matrix | Report detail level |
 | `TRANSACTION_TYPE` | M&A / JV / Strategic / Licensing / Minority / Due Diligence | M&A | Transaction context |
 | `PE_MODE` | Yes / No | Yes | PE-specific analysis |
+| `SUGGEST_ADDITIONS` | Yes / No | Yes | Auto-generate suggested text and modified NDA for missing clauses |
 
 ### Output Format Hierarchy (NEW in v2.7)
 
