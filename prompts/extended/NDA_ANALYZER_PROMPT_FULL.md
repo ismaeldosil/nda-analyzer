@@ -1457,7 +1457,7 @@ assess potential conflicts with local mandatory public policy laws:
 
 ## PE ACKNOWLEDGEMENT GENERATOR
 
-When `GENERATE_PE_ACK=Yes` and PE Acknowledgement is NOT PRESENT, generate insertion text.
+When PE Acknowledgement is NOT PRESENT and PE_MODE=Yes, generate insertion text.
 
 ### Full Version (Complex Transactions)
 
@@ -1794,7 +1794,7 @@ For `summary` and higher outputs, generate:
 
 **Recommendation**: [What to do]
 
-**Suggested Redline** (if INCLUDE_REDLINES=Yes):
+**Suggested Redline** (if OUTPUT_FORMAT=extended or complete):
 ```
 [Proposed language change]
 ```
@@ -1893,7 +1893,7 @@ Use this format when clause is NOT PRESENT:
 ## GENERATED CONTENT (if applicable)
 
 ### PE Acknowledgement for Insertion
-(If GENERATE_PE_ACK=Yes and clause was NOT PRESENT)
+(If PE_MODE=Yes and clause was NOT PRESENT)
 
 ```
 [Generated PE Acknowledgement text with placeholders filled]
@@ -1977,7 +1977,7 @@ Use this checklist to ensure complete analysis:
 ### Final Report Completeness
 - [ ] Executive Summary with Overall Risk Level
 - [ ] Risk Assessment Matrix fully populated
-- [ ] Detailed Findings for all flagged items with redlines (if INCLUDE_REDLINES=Yes)
+- [ ] Detailed Findings for all flagged items with redlines (if OUTPUT_FORMAT=extended or complete)
 - [ ] Inter-Agreement Risks section (if Integration clause present)
 - [ ] Data Privacy Assessment (if PII in scope)
 - [ ] Non-Delaware Impact Assessment (if non-Delaware law)
@@ -2088,10 +2088,10 @@ This section provides traceability for each clause's analytical criteria. Source
 ### Source Documentation
 
 Full source documentation with 31 verified references is maintained in:
-`/docs/04_INVESTIGACION_RIESGOS_NDA.md`
+`/docs/04_NDA_RISK_RESEARCH.md`
 
 Delaware-specific resources are documented in:
-`/docs/05_FUENTES_DATOS_LEGALES.md`
+`/docs/05_LEGAL_DATA_SOURCES.md`
 
 ---
 

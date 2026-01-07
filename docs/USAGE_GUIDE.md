@@ -176,7 +176,7 @@ Just give me the key risks and whether we should sign as-is.
 
 **Preparing Negotiation Points:**
 ```
-Analyze this NDA with INCLUDE_REDLINES=Yes.
+Analyze this NDA with OUTPUT_FORMAT=extended.
 I need specific language to propose for any problematic clauses.
 ```
 

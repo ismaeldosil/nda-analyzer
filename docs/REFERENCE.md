@@ -172,7 +172,6 @@ client-halmos-nda-analyzer-docs/
 │       └── NDA_ANALYZER_PROMPT_LITE.md   # Extended LITE (reference)
 └── docs/
     ├── USAGE_GUIDE.md                    # How to use with LLMs
-    ├── usage_guide.html                  # HTML version with styling
     ├── REFERENCE.md                      # This file
     └── CHANGELOG.md                      # Version history
 ```

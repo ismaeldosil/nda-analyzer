@@ -294,4 +294,4 @@ Remember: Only report clauses that are actually present. Mark missing clauses as
 
 ---
 
-*Version 2.6.1 | January 2026 | Token Optimization Release*
+*Version 2.7 | January 2026 | Auto-Analyze Release*
