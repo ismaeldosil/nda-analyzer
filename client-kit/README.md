@@ -25,12 +25,23 @@ Follow the setup guide in `SETUP_GUIDE.md` to create your own analyzer using:
 
 ---
 
+## Resources
+
+| Resource | Description |
+|----------|-------------|
+| **[QUICK_START.md](QUICK_START.md)** | One-page guide - get started in 30 seconds |
+| **[SETUP_GUIDE.md](SETUP_GUIDE.md)** | Detailed setup for Gemini, ChatGPT, Claude |
+| **[VIDEO_SCRIPT.md](VIDEO_SCRIPT.md)** | Video walkthrough talking points |
+| **Video Tutorial** | [Loom link to be added] |
+
 ## What's Included
 
 ```
 client-kit/
-├── README.md                 # You are here
-├── SETUP_GUIDE.md            # How to create your own analyzer
+├── README.md                 # You are here (start here)
+├── QUICK_START.md            # One-pager - fastest way to start
+├── SETUP_GUIDE.md            # Detailed setup instructions
+├── VIDEO_SCRIPT.md           # Video walkthrough guide
 ├── prompts/
 │   ├── NDA_ANALYZER_PROMPT_FULL.md   # Full analyzer (26 clauses)
 │   └── NDA_ANALYZER_PROMPT_LITE.md   # Quick analyzer (6 clauses)
