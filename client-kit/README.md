@@ -6,14 +6,22 @@
 
 ## Quick Start Options
 
-### Option 1: Instant Access (Recommended)
-Use our pre-built ChatGPT GPT:
-> **[Link to GPT will be added after creation]**
+### Option 1: Instant Access - Gemini Gem (Recommended)
 
-Just click the link and start analyzing NDAs immediately.
+Use our pre-built NDA Analyzer on Google Gemini:
+
+> **[NDA Analyzer Gem](https://gemini.google.com/gem/1eZK-8lANbx0-i_cvSbSbVyfsNyVj3n8u?usp=sharing)**
+
+**Requirements**: Google account (free)
+
+Just click the link, sign in with Google, and start analyzing NDAs immediately.
 
 ### Option 2: Build Your Own
-Follow the setup guide to create your own analyzer.
+
+Follow the setup guide in `SETUP_GUIDE.md` to create your own analyzer using:
+- **Google Gemini** (free) - Create a Gem
+- **ChatGPT** (requires Plus subscription - $20/month) - Create a GPT
+- **Claude** (requires Pro for sharing) - Create a Project
 
 ---
 
@@ -22,7 +30,7 @@ Follow the setup guide to create your own analyzer.
 ```
 client-kit/
 ├── README.md                 # You are here
-├── GPT_CONFIGURATION.md      # How to create the ChatGPT GPT
+├── SETUP_GUIDE.md            # How to create your own analyzer
 ├── prompts/
 │   ├── NDA_ANALYZER_PROMPT_FULL.md   # Full analyzer (26 clauses)
 │   └── NDA_ANALYZER_PROMPT_LITE.md   # Quick analyzer (6 clauses)
@@ -35,15 +43,16 @@ client-kit/
 
 ## How to Use
 
-### If using the shared GPT link:
-1. Click the link
-2. Upload or paste your NDA
-3. Get instant analysis
+### If using the Gemini Gem (Recommended):
+1. Click the [Gem link](https://gemini.google.com/gem/1eZK-8lANbx0-i_cvSbSbVyfsNyVj3n8u?usp=sharing)
+2. Sign in with your Google account
+3. Upload or paste your NDA
+4. Get instant analysis
 
 ### If building your own:
-1. Read `GPT_CONFIGURATION.md`
+1. Read `SETUP_GUIDE.md` for step-by-step instructions
 2. Copy the prompt from `prompts/NDA_ANALYZER_PROMPT_FULL.md`
-3. Create GPT in ChatGPT (or Project in Claude)
+3. Create a Gem (Gemini), GPT (ChatGPT Plus), or Project (Claude)
 4. Test with `samples/SAMPLE_NDA_PROJECT_ATLAS.md`
 
 ---
